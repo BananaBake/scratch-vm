@@ -40,9 +40,9 @@ const isStuck = () => {
  * @param {*} optMatchFields Fields to match.
  * @returns {Array} A list of threads that were started.
  */
-runtimeFunctions.startHats = `const startHats = (requestedHat, optMatchFields) => {
+runtimeFunctions.startHats = `const startHats = (requestedHat, optMatchFields, optTarget) => {
     const thread = globalState.thread;
-    const threads = thread.target.runtime.startHats(requestedHat, optMatchFields);
+    const threads = thread.target.runtime.startHats(requestedHat, optMatchFields, optTarget);
     return threads;
 }`;
 
